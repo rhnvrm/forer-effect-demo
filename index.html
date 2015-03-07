@@ -3,10 +3,18 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title> - jsFiddle demo</title>
+  <title>Personality Analysis</title>
   
   <script type='text/javascript' src='/js/lib/dummy.js'></script>
-  
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   
   
   
@@ -18,8 +26,7 @@
   
 
 
-<script type='text/javascript'>//<![CDATA[ 
-
+<script type='text/javascript'>
 function show_analysis(){
     //TODO check if username is entered
     var fform = document.getElementById("fake_form");
@@ -30,22 +37,30 @@ function show_analysis(){
     
     analysis.hidden = false;
 }
-//]]>  
+
 
 </script>
 
 
 </head>
 <body>
-  <div id = "fake_form">
-    <label>Name:</label> <input id ="uname" class="form" required = "true"></input><br>
-    <label>Pass:</label> <input class="form" type="password" required = "true"></input><br>
-    <input id="submit_btn" type="submit" onclick="show_analysis()"></input>
+  <div id = "fake_form" class="container-fluid">
+  <h1>Login</h1>
+    <div class="form-group">
+      <label>Name</label>
+      <input id ="uname" class="form-control" placeholder="Enter your Name" >
+    </div>
+    <div class="form-group">
+      <label>Email Address</label> 
+      <input class="form-control" placeholder="Enter your ASU email">
+    </div>
+    <button id="submit_btn" type="submit" class="btn btn-default" onclick="show_analysis()">Submit</input>
 </div>
-<div id = "analysis" hidden = "true">
+
+<div id = "analysis" hidden = "true" class="container-fluid">
     The Analysis for %USR% is:<br>
     
-    
+    You have a great need for other people to like and admire you. You have a tendency to be critical of yourself. You have a great deal of unused capacity which you have not turned to your advantage. While you have some personality weaknesses, you are generally able to compensate for them. Your sexual adjustment has presented problems for you. Disciplined and self-controlled outside, you tend to be worrisome and insecure inside. At times you have serious doubts as to whether you have made the right decision or done the right thing. You prefer a certain amount of change and variety and become dissatisfied when hemmed in by restrictions and limitations. You pride yourself as an independent thinker and do not accept others’ statements without satisfactory proof. You have found it unwise to be too frank in revealing yourself to others. At times you are extroverted, affable, sociable, while at other times you are introverted, wary, reserved. Some of your aspirations tend to be pretty unrealistic. Security is one of your major goals in life.
 </div>
 
     
