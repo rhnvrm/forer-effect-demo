@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+  
+  <script type='text/javascript' src='/js/lib/dummy.js'></script>
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+function show_analysis(){
+    //TODO check if username is entered
+    var fform = document.getElementById("fake_form");
+    var analysis = document.getElementById("analysis");
+    var uname = document.getElementById("uname").value;
+    fform.hidden =true;
+    analysis.innerHTML = analysis.innerHTML.replace("%USR%",uname);
+    
+    analysis.hidden = false;
+}
+//]]>  
+
+</script>
+
+
+</head>
+<body>
+  <div id = "fake_form">
+    <label>Name:</label> <input id ="uname" class="form" required = "true"></input><br>
+    <label>Pass:</label> <input class="form" type="password" required = "true"></input><br>
+    <input id="submit_btn" type="submit" onclick="show_analysis()"></input>
+</div>
+<div id = "analysis" hidden = "true">
+    The Analysis for %USR% is:<br>
+    
+    
+</div>
+
+    
+  
+</body>
+
+
+</html>
+
