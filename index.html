@@ -36,13 +36,25 @@ function shuffle(o){ //v1.0
     return o;
 };
 
+function rate(rating){
+
+  var rate = document.getElementById("rate");
+
+  rate.hidden = true;
+
+  console.log("pressed " + rating);
+
+  //Join to a database
+  
+};
+
+
 function show_analysis(){
     //TODO check if username is entered
     var fform = document.getElementById("fake_form");
 
     var analysis = document.getElementById("analysis");
 
-    var rate = document.getElementById("rate");
 
     var uname = document.getElementById("uname").value;
 
@@ -90,11 +102,11 @@ function show_analysis(){
     <div id = "rate" class = "panel-footer" >
       How accurate is this Personality Analysis According to you? &nbsp;
       <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default">1</button>
-        <button type="button" class="btn btn-default">2</button>
-        <button type="button" class="btn btn-default">3</button>
-        <button type="button" class="btn btn-default">4</button>
-        <button type="button" class="btn btn-default">5</button>
+        <button type="button" class="btn btn-default" onclick="rate(1)">1</button>
+        <button type="button" class="btn btn-default" onclick="rate(2)">2</button>
+        <button type="button" class="btn btn-default" onclick="rate(3)">3</button>
+        <button type="button" class="btn btn-default" onclick="rate(4)">4</button>
+        <button type="button" class="btn btn-default" onclick="rate(5)">5</button>
       </div>
     </div>
   </div>
